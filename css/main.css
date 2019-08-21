@@ -11,7 +11,7 @@
 }
 
 html {
-    font-size: calc(2em + 1.25vw);
+    font-size: calc(1.5em + 2vw);
     color: var(--light);
     background-color: var(--dark);
     font-family: 'Roboto', sans-serif;

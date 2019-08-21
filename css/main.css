@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@font-face {
+    font-family: 'Roboto';
+    src: url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+}
 
 :root {
     --dark: #121631;

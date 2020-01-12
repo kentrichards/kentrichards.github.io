@@ -1,38 +1,55 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>kentrichards.dev</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet"  type="text/css" media="screen" href="css/normalize.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
-    <script src="https://kit.fontawesome.com/3a1b94875f.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css">
 </head>
+
 <body>
-<main>
-    <div class="container">
-        <h2>kentrichards.dev</h2>
-        <div>
-            <i class="fab fa-google-play"></i>
-            Catchphrase
-            <small>Coming soon to Google Play</small>
+    <header>
+        <h1>kentrichards.dev</h1>
+    </header>
+    <main>
+        <div id="links">
+            <h2>Links</h2>
+            <div class="active-link">
+                <a href="/docs/KentRichardsResume.pdf">
+                    <i class="fas fa-file-pdf"></i>
+                    <p>Resume</p>
+                    <small>Last updated September 2019</small>
+                </a>
+            </div>
+            <div class="active-link">
+                <a href="https://www.linkedin.com/in/kent-richards/">
+                    <i class="fas fa-envelope"></i>
+                    <p>LinkedIn</p>
+                    <small>Connect with me on LinkedIn</small>
+                </a>
+            </div>
+            <div class="active-link">
+                <a href="https://www.github.com/kentrichards/">
+                    <i class="fas fa-envelope"></i>
+                    <p>GitHub</p>
+                    <small>Check out my projects on GitHub</small>
+                </a>
+            </div>
         </div>
-        <div class="active-link">
-            <a href="docs/KentRichardsResume.pdf">
-                <i class="fas fa-file-pdf"></i>
-                Resume
-                <small>Last updated September 2019</small>
-            </a>
         </div>
-        <div class="active-link">
-            <a href="mailto:kentrichardsmrhs@gmail.com">
-                <i class="fas fa-envelope"></i>
-                Contact
-                <small>Email Kent</small>
-            </a>
+        <div id="contact-form">
+            <h2>Contact</h2>
+            <div>
+                <input type="text" name="subject" id="subject" placeholder="Subject">
+                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                <button onclick="sendEmail()">Send Email</button>
+            </div>
         </div>
-    </div>
-</main>
+    </main>
+    <script src="/js/main.js"></script>
 </body>
+
 </html>

@@ -8,11 +8,13 @@
 
 html {
     color: var(--dark);
-    background-color: white;
+    background-color: #f8f8ff;
     font-family: sans-serif;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     line-height: 1;
     margin-bottom: 1rem;
 }
@@ -27,8 +29,8 @@ header {
     width: 100%;
     height: auto;
     z-index: 99;
-    background-color: white;
-    box-shadow: 0 0 1px 0 black;
+    background-color: #f8f8ff;
+    box-shadow: 0 0 1px 0 var(--dark);
 }
 
 header h1 {
@@ -63,10 +65,18 @@ a {
     text-decoration: none
 }
 
-input, textarea, button {
+input,
+textarea,
+button {
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid var(--dark);
     padding: 0.25rem;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+    outline: none;
 }
 
 textarea {
@@ -76,17 +86,17 @@ textarea {
 }
 
 button {
-    margin-top: 1rem;
+    margin-top: 0.8rem;
     margin-bottom: 1rem;
     text-transform: uppercase;
     padding: 1rem;
-    background: white;
+    background: #f8f8ff;
     transition: all 0.4s ease 0s;
     cursor: pointer;
 }
 
 button:hover {
-    color: white;
+    color: #f8f8ff;
     background: var(--dark);
     border-color: var(--dark);
     transition: all 0.4s ease 0s;

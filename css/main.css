@@ -1,103 +1,103 @@
 :root {
-    --dark: #121631;
+  --dark: #121631;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    color: var(--dark);
-    background-color: #f8f8ff;
-    font-family: sans-serif;
+  color: var(--dark);
+  background-color: #f8f8ff;
+  font-family: sans-serif;
 }
 
 h1,
 h2,
 h3 {
-    line-height: 1;
-    margin-bottom: 1rem;
+  line-height: 1;
+  margin-bottom: 1rem;
 }
 
 p {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: auto;
-    z-index: 99;
-    background-color: #f8f8ff;
-    box-shadow: 0 0 1px 0 var(--dark);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+  z-index: 99;
+  background-color: #f8f8ff;
+  box-shadow: 0 0 1px 0 var(--dark);
 }
 
 header h1 {
-    text-align: center;
-    font-size: 2rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 main {
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-#links {
-    margin-top: 4rem;
+.spacer {
+  margin-top: 4rem;
 }
 
-#links div:hover {
-    border-right: var(--dark) 2px solid;
+.links div:hover {
+  border-right: var(--dark) 2px solid;
 }
 
 .active-link {
-    cursor: pointer
+  cursor: pointer;
 }
 
 a {
-    color: inherit;
-    text-decoration: none
+  color: inherit;
+  text-decoration: none;
 }
 
 input,
 textarea,
 button {
-    width: 100%;
-    border: 1px solid var(--dark);
-    padding: 0.25rem;
+  width: 100%;
+  border: 1px solid var(--dark);
+  padding: 0.25rem;
 }
 
 input:focus,
 textarea:focus,
 button:focus {
-    outline: none;
+  outline: none;
 }
 
 textarea {
-    margin-top: 1rem;
-    resize: vertical;
-    min-height: 8rem;
+  margin-top: 1rem;
+  resize: vertical;
+  min-height: 8rem;
 }
 
 button {
-    margin-top: 0.8rem;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    padding: 1rem;
-    background: white;
-    transition: all 0.4s ease 0s;
-    cursor: pointer;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  padding: 1rem;
+  background: white;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
 }
 
 button:hover {
-    color: #f8f8ff;
-    background: var(--dark);
-    border-color: var(--dark);
-    transition: all 0.4s ease 0s;
+  color: #f8f8ff;
+  background: var(--dark);
+  border-color: var(--dark);
+  transition: all 0.4s ease 0s;
 }

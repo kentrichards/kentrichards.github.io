@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Secret Santa: Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
+    <!-- Information icons from the free Font Awesome library.
+    Copyright of these icons is owned by Font Awesome, and is licensed for free use.
+    More information can be found here: https://fontawesome.com/license/free -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+        crossorigin="anonymous">
+    <!--
+    Nicolas Gallagher (2018), http://nicolasgallagher.com Normalize.css.
+    URL: https://necolas.github.io/normalize.css/
+    Date Accessed: December, 2018
+    -->
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div id="logo_container">
+            <p id="logo">Secret Santa</p>
+        </div>
+        <div id="links_container">
+            <a href="#" class="active">Home</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </header>
+    <main>
+        <form method="POST" action="javascript:getParticipants();">
+            <div id="line_one_wrapper">
+                <div></div>
+                <div>
+                    <label>Organizer&nbsp;<a href="faq.html#organizer_section" target="_blank"><i class="fas fa-info-circle"></i></a>
+                        <p>(Also a participant)</p>
+                    </label>
+                    <input type="text" placeholder="Name" id="organizer_name" required>
+                    <input type="email" placeholder="Email Address" id="organizer_email" required>
+                </div>
+                <div>
+                    <label id="counter_label">Price Limit&nbsp;<a href="faq.html#price_limit_section" target="_blank"><i
+                                class="fas fa-info-circle"></i></a>
+                        <p>(Optional)</p>
+                    </label>
+                    <input type="number" min="0" pattern="[0-9]" placeholder="Price" id="counter">
+                </div>
+                <div></div>
+            </div>
+            <div id="line_two_wrapper">
+                <div></div>
+                <div>
+                    <label>Email Template&nbsp;<a href="faq.html#price_limit_section" target="_blank"><i class="fas fa-info-circle"></i></a></label><br>
+                    <input type="text" placeholder="Subject Line (i.e., Office Secret Santa)" id="subject_line"
+                        required>
+                </div>
+                <div></div>
+                <div></div>
+                <div>
+                    <p id="email_body">Dear <b>PARTICIPANT</b>,<br><br>
+
+                        Thank you for taking part in this year's gift exchange.<br>
+                        You have been randomly selected to purchase a gift for <b>MATCH</b>.<br>
+                        <span id="span1">The price limit for this gift is $<span id="span2"></span>.</span><br><br>
+
+                        We hope you have a great holiday season.<br><br>
+
+                        Happy Shopping,<br>
+                        SecretSantaByEmail.com</p>
+                </div>
+                <div></div>
+                <div></div>
+                <div>
+                    <label>Participants</label><br>
+                </div>
+            </div>
+            <div id="line_three_wrapper">
+                <div></div>
+                <div><input type="text" placeholder="Name" class="participant_names required"></div>
+                <div><input type="email" placeholder="Email Address" class="participant_emails" required></div>
+                <div></div>
+                <div></div>
+                <div><input type="text" placeholder="Name" class="participant_names" required></div>
+                <div><input type="email" placeholder="Email Address" class="participant_emails" required></div>
+                <div></div>
+            </div>
+            <div id="line_four_wrapper">
+            </div>
+            <div id="line_five_wrapper">
+                <div></div>
+                <button type="button" id="add_participant" class="action" onclick="addParticipant()">Add Participant</button>
+                <input type="submit" id="submit" class="action" value="Get Matches">
+                <div></div>
+            </div>
+        </form>
+    </main>
+    <script src="scripts/bundle.js"></script>
+</body>
+
+</html>

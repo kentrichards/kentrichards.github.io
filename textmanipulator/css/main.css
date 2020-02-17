@@ -1,0 +1,247 @@
+* {
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+body {
+    background-color: lightgray;
+}
+
+/* HEADER STYLING */
+header {
+    height: 200px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 3fr 6fr 3fr;
+}
+
+.float-right {
+    float: right;
+}
+
+.header-controls {
+    margin: 10px 0 50px 0;
+    background-color: lightcoral;
+}
+
+.header-controls:hover {
+    box-shadow: 3px 3px  rgba(0, 0, 0, .4);
+    background-color: rgba(240, 128, 128, 0.7);
+}
+
+.header-controls:active {
+    box-shadow: 0px 0px rgba(0, 0, 0, .4);
+    top: 3px;
+    left: 3px;
+}
+
+/* MAIN STYLING */
+button, textarea {
+    border-radius: 4px; /* comment out */
+    border: none;       /* black 0.5px solid */
+    box-shadow: 4px 4px rgba(0, 0, 0, .4);
+}
+
+button {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px;
+    margin: 0 8px 12px 0;
+    transition: all  0.2s ease;
+}
+
+textarea {
+    width: 100%;
+    resize: vertical;
+    min-height: 300px;
+    padding: 10px;
+}
+
+button:focus, textarea:focus {
+    outline: none;
+}
+
+#counter {
+    float: left;
+}
+
+#copy {
+    float: right;
+    margin: 8px 0 10px 0;
+}
+
+/* BUTTON STYLING */
+.green {
+    background-color: lightgreen;
+}
+
+.green:hover {
+    box-shadow: 3px 3px rgba(0, 0, 0, .4);
+    background-color: rgba(144, 238, 144, 0.7);
+}
+
+.green:active {
+    box-shadow: 0px 0px rgba(0, 0, 0, .4);
+    top: 3px;
+    left: 3px;
+}
+
+.blue {
+    background-color: lightsteelblue;
+}
+
+.blue:hover {
+    box-shadow: 3px 3px  rgba(0, 0, 0, .4);
+    background-color: rgba(176, 196, 222, 0.7);
+}
+
+.blue:active {
+    box-shadow: 0px 0px rgba(0, 0, 0, .4);
+    top: 3px;
+    left: 3px;
+}
+
+.camelcase {
+    background-color: rgb(161, 215, 187);
+}
+
+.camelcase:hover {
+    box-shadow: 3px 3px  rgba(0, 0, 0, .4);
+    background-color: rgba(161, 215, 187, 0.7);
+}
+
+.camelcase:active {
+    box-shadow: 0px 0px rgba(0, 0, 0, .4);
+    top: 3px;
+    left: 3px;
+}
+
+.pink {
+    background-color: lightsalmon;
+}
+
+.pink:hover {
+    box-shadow: 3px 3px  rgba(0, 0, 0, .4);
+    background-color: rgba(255, 160, 122, 0.7);
+}
+
+.pink:active {
+    box-shadow: 0px 0px rgba(0, 0, 0, .4);
+    top: 3px;
+    left: 3px;
+}
+
+/* index.html */
+.directory {
+    position: relative;
+    height: auto;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 4px 4px rgba(0, 0, 0, .4);
+    margin: 0;
+}
+
+.directory>a>h1 {
+    font-size: 2.9em;
+    text-align: center;
+    line-height: 200px;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* gradeCalculator.html */
+h1 {
+    margin: 0 0 15px 0;
+}
+
+/* remove spinner from input type="number"*/
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance:textfield;
+}
+
+.grade-input-wrapper {
+    position: relative;
+}
+
+.grade-input-wrapper .fas {
+    position: absolute;
+    padding: 11px;
+    margin: 4px 0 0 0;
+    right: 0px;
+}
+
+.grade-input-wrapper input {
+    padding-right: 30px;
+}
+
+.fa-check {
+    display: none;
+    color: green;
+}
+
+.fa-exclamation-circle {
+    display: none;
+    color: darkred;
+}
+
+input {
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 4px 0 12px 0;
+    width: 100%;
+    box-shadow: 4px 4px rgba(0, 0, 0, .4);
+}
+
+input::placeholder {
+    opacity: 0.5;
+}
+
+#calculate-wrapper>button {
+    float: right;
+    margin: 0;
+}
+
+@media only screen and (max-width: 1500px) {
+    header {
+        height: 175px;
+    }
+
+    .grid {
+        grid-template-columns: 2fr 6fr 2fr;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    header {
+        height: 150px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 6fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 890px) {
+    header {
+        height: auto;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 40fr 1fr;
+    }
+}

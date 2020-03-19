@@ -11,50 +11,53 @@
 </head>
 
 <body>
-    <header>
-        <h1>kentrichards.dev</h1>
-    </header>
     <main>
-        <div class="links spacer">
+        <div>
+            <h2>Hello!</h2>
+            <div>
+                <p>I'm <b>Kent Richards</b>, a third-year Computer Science student at Dalhousie University. I'm currently on a co-op work term helping the Public Service Commission of Canada build their next-generation candidate assessment software in <b>React</b> and <b>Django</b>.</p>
+            </div>
+        </div>
+        <div class="links">
             <h2>Links</h2>
             <div class="active-link">
                 <a href="/docs/resume.pdf">
-                    <p>Resume</p>
-                    <small>Last updated September 2019</small>
+                    <p><b>Resume</b></p>
+                    <small><i>Last updated September 2019</i></small>
                 </a>
             </div>
             <div class="active-link">
                 <a href="https://www.linkedin.com/in/kent-richards/">
-                    <p>LinkedIn</p>
-                    <small>Connect with me on LinkedIn</small>
+                    <p><b>LinkedIn</b></p>
+                    <small><i>Connect with me on LinkedIn</i></small>
                 </a>
             </div>
             <div class="active-link">
                 <a href="https://www.github.com/kentrichards/">
-                    <p>GitHub</p>
-                    <small>Check out my projects on GitHub</small>
+                    <p><b>GitHub</b></p>
+                    <small><i>Check out my projects on GitHub</i></small>
                 </a>
             </div>
-            <h2>Websites</h2>
+            <h2>Projects</h2>
             <div class="active-link">
                 <a href="secretsanta/index.html">
-                    <p>Secret Santa</p>
-                    <small>An unfinished website to match participants for a Secret Santa gift exchange</small>
+                    <p><b>Secret Santa</b></p>
+                    <small><i>An unfinished website to match participants for a Secret Santa gift exchange</i></small>
                 </a>
             </div>
             <div class="active-link">
                 <a href="textmanipulator/index.html">
-                    <p>Text Manipulator</p>
-                    <small>Simple little website created to experiment with CSS and JavaScript</small>
+                    <p><b>Text Manipulator</b></p>
+                    <small><i>Simple little website created to experiment with CSS and JavaScript</i></small>
                 </a>
             </div>
         </div>
-        <div id="contact-form">
-            <h2>Contact</h2>
+        <div>
+            <h2 id="contact-form">Contact</h2>
             <div>
                 <input type="text" name="subject" id="subject" placeholder="Subject">
                 <textarea name="message" id="message" cols="30" rows="10"></textarea>
-                <button onclick="sendEmail()">Send Email</button>
+                <button onclick="sendEmail()" class="push-button">Send Email</button>
             </div>
         </div>
     </main>

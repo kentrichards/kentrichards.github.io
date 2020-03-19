@@ -1,55 +1,47 @@
 :root {
-  --dark: #121631;
-}
-
-* {
-  box-sizing: border-box;
+  --dark: #444452;
+  --light: azure;
+  --accent: #007bff;
+  --highlight: #ffdc00;
 }
 
 html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   color: var(--dark);
-  background-color: #f8f8ff;
+  background-color: var(--light);
   font-family: sans-serif;
 }
 
-h1,
-h2,
-h3 {
+*,
+:after,
+:before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+::-moz-selection {
+  background:var(--highlight);
+}
+
+::selection {
+  background:var(--highlight);
+}
+
+h2 {
   line-height: 1;
   margin-bottom: 1rem;
 }
 
 p {
   margin-bottom: 0;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: auto;
-  z-index: 99;
-  background-color: #f8f8ff;
-  box-shadow: 0 0 1px 0 var(--dark);
-}
-
-header h1 {
-  text-align: center;
-  font-size: 2rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  text-align: justify;
 }
 
 main {
   max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.spacer {
-  margin-top: 4rem;
+  margin: 0 auto;
+  padding: 0 1rem 1.5rem 1rem;
 }
 
 .links div:hover {
@@ -60,44 +52,63 @@ main {
   cursor: pointer;
 }
 
+h2 {
+  color: var(--accent);
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
+#contact-form {
+  margin-bottom: 1.25rem;
+}
+
 input,
-textarea,
-button {
+textarea {
   width: 100%;
-  border: 1px solid var(--dark);
-  padding: 0.25rem;
+  border: none;
+  background-color: var(--light);
+  box-shadow: 0 0 0 0.25rem var(--accent);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: var(--dark);
 }
 
 input:focus,
-textarea:focus,
-button:focus {
+textarea:focus {
   outline: none;
 }
 
 textarea {
-  margin-top: 1rem;
   resize: vertical;
   min-height: 8rem;
 }
 
 button {
-  margin-top: 0.8rem;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
+  width: 100%;
   padding: 1rem;
-  background: white;
-  transition: all 0.4s ease 0s;
   cursor: pointer;
 }
 
-button:hover {
-  color: #f8f8ff;
-  background: var(--dark);
-  border-color: var(--dark);
-  transition: all 0.4s ease 0s;
+.push-button {
+  font-size: 2rem;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  background-color: var(--light);
+  color: var(--accent);
+  box-shadow: 0 0 0 0.25rem var(--accent), 0 0.5rem var(--accent);
+  transition-delay: 0.05s;
+}
+
+.push-button:hover {
+  cursor: pointer;
+}
+
+.push-button:active {
+  transform: translateY(0.25rem);
+  box-shadow: 0 0 0 0.25rem var(--accent), 0 0 var(--accent);
 }

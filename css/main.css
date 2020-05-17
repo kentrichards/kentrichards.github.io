@@ -38,7 +38,7 @@ html {
     font-size: 62.5%;
 
     /* Size variables */
-    --nav-width-closed: 7.5rem;
+    --nav-width-closed: 6rem;
     --nav-width-open: calc(var(--nav-width-closed) * 4);
 }
 
@@ -55,7 +55,6 @@ body {
 
     position: fixed;
     overflow: hidden;
-    z-index: 9999;
 
     font-size: calc(var(--nav-width-closed) * 0.4);
 }
@@ -144,7 +143,7 @@ main {
 
     .nav-text {
         display: inline;
-        font-size: calc(var(--nav-width-closed) * 0.3);
+        font-size: calc(var(--nav-width-closed) * 0.25);
         margin-left: 0;
     }
 }

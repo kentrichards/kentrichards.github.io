@@ -51,7 +51,8 @@ body {
 /* Navigation sidebar styles */
 /* ------------------------------------------------------------------------- */
 .navbar {
-    background: dodgerblue;
+    background: #f5f5f7;
+    border-right: 1px solid rgba(161, 161, 161, 0.3);
 
     position: fixed;
     overflow: hidden;
@@ -78,14 +79,19 @@ body {
     margin-top: auto;
 }
 
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
 .nav-link {
     display: flex;
     align-items: center;
     text-decoration: none;
+    color: #a1a1a1;
 }
 
-.nav-link:hover {
-    background: lightgray;
+.nav-link.active {
+    color: #007aff;
 }
 
 .nav-text {
@@ -106,8 +112,9 @@ body {
 /* Main content styles */
 /* ------------------------------------------------------------------------- */
 main {
-    padding: 2rem;
-    font-size: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
 
     width: 100vw;
     height: 100vh;
@@ -121,6 +128,8 @@ main {
         bottom: 0;
         width: 100vw;
         height: var(--nav-width-closed);
+
+        border-top: 1px solid rgba(161, 161, 161, 0.3);
     }
 
     .navbar-nav {
@@ -139,11 +148,12 @@ main {
 
     .nav-icon {
         height: auto;
+        font-size: 2rem;
     }
 
     .nav-text {
         display: inline;
-        font-size: calc(var(--nav-width-closed) * 0.25);
+        font-size: calc(var(--nav-width-closed) * 0.2);
         margin-left: 0;
     }
 }

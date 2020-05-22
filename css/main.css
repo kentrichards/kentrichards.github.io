@@ -252,7 +252,7 @@ button {
   height: calc(100vh - var(--nav-width-closed) - 2rem);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 /* Responsive styles */

@@ -54,7 +54,7 @@ html {
 
 body {
     /* Restore default font-size to 18px */
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-family: 'Roboto', sans-serif;
 
     background: var(--bg-primary);

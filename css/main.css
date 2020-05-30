@@ -229,7 +229,7 @@ textarea {
 #projects h1 {
     color: transparent;
     background: var(--grey500);
-    text-shadow: 0px 2px 3px hsla(0, 0%, 100%, 0.7);
+    text-shadow: 0px 1px 2px hsla(0, 0%, 100%, 0.7);
     -webkit-background-clip: text;
     background-clip: text;
 }

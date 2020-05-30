@@ -89,9 +89,8 @@ body {
     color: var(--primary200);
 }
 
-.nav-link:hover,
-.nav-link:active {
-    text-decoration: 0;
+.nav-link:hover {
+    text-decoration: none;
     background: var(--grey200);
 }
 

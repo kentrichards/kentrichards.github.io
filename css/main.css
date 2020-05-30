@@ -181,17 +181,17 @@ textarea {
     color: var(--grey800);
     background: var(--grey100);
 
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     margin-bottom: 1rem;
     padding: 0 0.5rem;
 }
 
 input {
-    height: 3rem;
+    height: 4rem;
 }
 
 textarea {
-    height: 6rem;
+    height: 8rem;
 }
 
 .send-icon {

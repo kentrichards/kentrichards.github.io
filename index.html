@@ -14,7 +14,7 @@
             <nav class="navbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="#" class="nav-link active">
+                        <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-user"></i>
                             <span class="nav-text">About</span>
                         </a>
@@ -28,7 +28,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="#" class="nav-link active">
                             <i class="nav-icon fas fa-envelope"></i>
                             <span class="nav-text">Contact</span>
                         </a>
@@ -44,17 +44,32 @@
             </nav>
         </header>
         <main>
-            <img class="portrait" src="assets/images/portrait.jpg" />
-            <p>
-                <span class="bold">Hello!</span> I'm <b>Kent Richards</b>, a third-year Computer
-                Science student at Dalhousie University. I'm currently on a co-op work term helping
-                the <a href="#">Public Service Commission of Canada</a> build their next-generation
-                candidate assessment software in <strong>React</strong> and <strong>Django</strong>.
-            </p>
-            <button class="primary">Resume <span class="secondary-text">(PDF)</span></button>
-            <div class="social-links">
-                <a href="#">LinkedIn</a>
-                <a href="#">GitHub</a>
+            <div class="about">
+                <img class="portrait" src="assets/images/portrait.jpg" />
+                <p>
+                    <span class="bold">Hello!</span> I'm <b>Kent Richards</b>, a third-year Computer
+                    Science student at Dalhousie University. I'm currently on a co-op work term
+                    helping the <a href="#">Public Service Commission of Canada</a> build their
+                    next-generation candidate assessment software in <strong>React</strong> and
+                    <strong>Django</strong>.
+                </p>
+                <button class="primary">Resume <span class="secondary-text">(PDF)</span></button>
+                <div class="social-links">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">GitHub</a>
+                </div>
+            </div>
+            <div class="contact">
+                <h1>Get in touch</h1>
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" id="subject" placeholder="make it interesting" />
+                <label for="message">Message</label>
+                <textarea
+                    name="message"
+                    id="message"
+                    placeholder="a job offer, perhaps..?"
+                ></textarea>
+                <button class="primary">Send <i class="send-icon fas fa-paper-plane"></i></button>
             </div>
         </main>
     </body>

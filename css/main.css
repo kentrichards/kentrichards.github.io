@@ -40,7 +40,7 @@
 
     --interactive: hsl(211, 100%, 50%);
 
-    --thin-border: 2px solid var(--grey300);
+    --thin-border: 1px solid var(--grey300);
     --faint-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
 }
 
@@ -125,6 +125,10 @@ main {
 
 /* "About" styles */
 /* ------------------------------------------------------------------------- */
+.about {
+    display: none;
+}
+
 .portrait {
     display: block;
     margin: 0 auto 1rem auto;
@@ -155,4 +159,41 @@ button:active {
 .social-links {
     display: flex;
     justify-content: space-around;
+}
+
+/* "Contact" styles */
+/* ------------------------------------------------------------------------- */
+label {
+    margin: 0;
+
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+input,
+textarea {
+    width: 100%;
+    display: block;
+
+    border: var(--thin-border);
+
+    color: var(--grey800);
+    background: var(--grey100);
+
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+}
+
+input {
+    height: 3rem;
+}
+
+textarea {
+    height: 6rem;
+}
+
+.send-icon {
+    font-size: 16px;
 }

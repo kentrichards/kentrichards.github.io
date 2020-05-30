@@ -7,6 +7,7 @@ const contentBoxes = [
 ];
 
 tabs.forEach((tab) => {
+    // switch content when tab is pressed
     tab.addEventListener('click', (event) => {
         tabs.forEach((tab) => {
             tab.classList.remove('active');

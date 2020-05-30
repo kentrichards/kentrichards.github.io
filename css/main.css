@@ -126,7 +126,7 @@ main {
 /* "About" styles */
 /* ------------------------------------------------------------------------- */
 #about {
-    display: none;
+    display: block;
 }
 
 .portrait {
@@ -161,8 +161,18 @@ button:active {
     justify-content: space-around;
 }
 
+/* "Projects" styles */
+/* ------------------------------------------------------------------------- */
+#projects {
+    display: none;
+}
+
 /* "Contact" styles */
 /* ------------------------------------------------------------------------- */
+#contact {
+    display: none;
+}
+
 label {
     margin: 0;
 
@@ -192,9 +202,33 @@ input {
 }
 
 textarea {
-    height: 8rem;
+    min-height: 8rem;
 }
 
 .send-icon {
     font-size: 16px;
+}
+
+/* "Articles" styles */
+/* ------------------------------------------------------------------------- */
+#articles {
+    display: none;
+}
+
+#articles div,
+#projects div {
+    height: calc(100vh - 6rem);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#articles h1,
+#projects h1 {
+    color: transparent;
+    background: var(--grey500);
+    text-shadow: 0px 2px 3px hsla(0, 0%, 100%, 0.7);
+    -webkit-background-clip: text;
+    background-clip: text;
 }

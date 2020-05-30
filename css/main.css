@@ -89,7 +89,8 @@ body {
     color: var(--primary200);
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:active {
     text-decoration: 0;
     background: var(--grey200);
 }

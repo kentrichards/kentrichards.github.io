@@ -1,0 +1,74 @@
+/* Custom fonts */
+/* ------------------------------------------------------------------------- */
+
+/* Roboto Regular */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'),
+        url('../assets/fonts/roboto-v20-latin-regular.woff2') format('woff2'),
+        url('../assets/fonts/roboto-v20-latin-regular.woff') format('woff');
+}
+
+/* Roboto Black*/
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Roboto Black'), local('Roboto-Black'),
+        url('../assets/fonts/roboto-v20-latin-900.woff2') format('woff2'),
+        url('../assets/fonts/roboto-v20-latin-900.woff') format('woff');
+}
+
+/* Universal styles */
+/* ------------------------------------------------------------------------- */
+:root {
+    --grey100: hsl(204, 45%, 98%);
+    --grey200: hsl(210, 38%, 95%);
+    --grey300: hsl(214, 32%, 91%);
+    --grey400: hsl(211, 25%, 84%);
+    --grey500: hsl(214, 20%, 69%);
+    --grey600: hsl(216, 15%, 52%);
+    --grey700: hsl(218, 17%, 35%);
+    --grey800: hsl(218, 23%, 23%);
+    --grey900: hsl(220, 26%, 14%);
+
+    --interactive: hsl(211, 100%, 50%);
+
+    --thin-border: 1px solid var(--grey400);
+    --faint-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.2);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--grey800);
+    background: var(--grey200);
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 2rem;
+}
+
+.list-item {
+    margin-bottom: 1rem;
+    padding: 2rem;
+    border: var(--thin-border);
+    background: var(--grey100);
+    width: 600px;
+    display: flex;
+}
+
+.draggable {
+    cursor: move;
+    user-select: none;
+}
+
+.placeholder {
+    border: 1px dashed var(--interactive);
+    background: var(--grey200);
+}
+
+.fa-grip-lines {
+    margin-left: auto;
+    margin-right: 10px;
+}

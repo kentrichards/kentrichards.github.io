@@ -51,11 +51,28 @@ body {
 
 .list-item {
     margin-bottom: 1rem;
-    padding: 2rem;
-    border: var(--thin-border);
+    padding: 2rem 1rem;
+    /* border: var(--thin-border); */
     background: var(--grey100);
     width: 600px;
     display: flex;
+    align-items: center;
+    box-shadow: var(--faint-shadow);
+    border-radius: 2px;
+}
+
+.list-item .fas,
+.list-item .far {
+    visibility: hidden;
+}
+
+.list-item:hover .fas,
+.list-item:hover .far {
+    visibility: visible;
+}
+
+.list-item > span {
+    margin-right: 1rem;
 }
 
 .draggable {
@@ -65,10 +82,58 @@ body {
 
 .placeholder {
     border: 1px dashed var(--interactive);
-    background: var(--grey200);
+    background: transparent;
+    box-shadow: none;
+}
+
+.fas,
+.far {
+    font-size: 1.25rem;
+    color: var(--grey700);
 }
 
 .fa-grip-lines {
     margin-left: auto;
-    margin-right: 10px;
+    margin-right: 1rem;
+}
+
+.fa-ellipsis-v,
+.fa-circle,
+.fa-check-circle {
+    cursor: pointer;
+}
+
+.fa-circle,
+.fa-check-circle {
+    margin-right: 1rem;
+}
+
+.fa-check-circle {
+    color: green;
+}
+
+#circle-test {
+    background: lightskyblue;
+    color: darkslateblue;
+    border-radius: 0.8rem; /* half the size of width/line-height */
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.6rem;
+    text-align: center;
+    width: 1.6rem;
+}
+
+#circle-test.four {
+    background: lightsalmon;
+    color: darkred;
+}
+
+/* smartphones, touchscreens */
+@media (hover: none) and (pointer: coarse) {
+    .list-item .fas,
+    .list-item .far,
+    .list-item:hover .fas,
+    .list-item:hover .far {
+        visibility: visible;
+    }
 }

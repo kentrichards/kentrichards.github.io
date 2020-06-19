@@ -51,7 +51,7 @@ const mouseMoveHandler = (e) => {
     // Set position for dragging element
     draggingEle.style.position = 'absolute';
     draggingEle.style.top = `${e.pageY - y}px`;
-    draggingEle.style.left = `${e.pageX - x}px`;
+    // draggingEle.style.left = `${e.pageX - x}px`;
 
     // The current order:
     //      prevEle
@@ -126,4 +126,18 @@ const list = document.getElementById('list');
 // Query all items
 [].slice.call(list.querySelectorAll('.draggable')).forEach((item) => {
     item.addEventListener('mousedown', mouseDownHandler);
+});
+
+const toggleTask = (e) => {
+    if (e.target.classList.contains('fa-check-circle')) {
+        e.target.classList.add('fa-circle');
+        e.target.classList.remove('fa-check-circle');
+    } else {
+        e.target.classList.add('fa-check-circle');
+        e.target.classList.remove('fa-circle');
+    }
+};
+
+[].slice.call(list.querySelectorAll('.fa-circle')).forEach((item) => {
+    item.addEventListener('click', toggleTask);
 });

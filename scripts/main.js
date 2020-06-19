@@ -103,6 +103,8 @@ const mouseUpHandler = () => {
     draggingEle = null;
 
     // Remove 'mousemove' and 'mouseup' event handlers
+    document.removeEventListener('touchmove', mouseMoveHandler);
+    document.removeEventListener('touchend', mouseUpHandler);
     document.removeEventListener('mousemove', mouseMoveHandler);
     document.removeEventListener('mouseup', mouseUpHandler);
 };
@@ -116,6 +118,8 @@ const mouseDownHandler = (e) => {
     y = e.pageY - rect.top;
 
     // Attach the listeners `document`
+    document.addEventListener('touchmove', mouseMoveHandler);
+    document.addEventListener('touchend', mouseUpHandler);
     document.addEventListener('mousemove', mouseMoveHandler);
     document.addEventListener('mouseup', mouseUpHandler);
 };
@@ -125,6 +129,7 @@ const list = document.getElementById('list');
 
 // Query all items
 [].slice.call(list.querySelectorAll('.draggable')).forEach((item) => {
+    item.addEventListener('touchstart', mouseDownHandler);
     item.addEventListener('mousedown', mouseDownHandler);
 });
 

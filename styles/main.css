@@ -54,7 +54,6 @@ body {
     padding: 2rem 1rem;
     /* border: var(--thin-border); */
     background: var(--grey100);
-    width: 600px;
     display: flex;
     align-items: center;
     box-shadow: var(--faint-shadow);

@@ -185,8 +185,12 @@ ul {
   align-items: center;
 }
 
+.task-item > div > span {
+  margin-right: 1rem;
+}
+
 .check {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 
 .check,

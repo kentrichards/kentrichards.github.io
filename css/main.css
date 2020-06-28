@@ -42,7 +42,7 @@ body {
 /* ------------------------------------------------------------------------- */
 header {
   width: 100%;
-  height: 5rem;
+  height: 4rem;
   z-index: 1000;
   padding: 0 1rem;
 
@@ -96,12 +96,13 @@ main {
 
 aside,
 section {
-  padding: 6rem 1rem 1rem 1rem;
+  padding: 5rem 1rem 1rem 1rem;
 }
 
 aside {
-  min-width: 384px;
-  background: var(--grey100);
+  width: 256px;
+  background: var(--grey000);
+  border-right: 1px solid var(--grey100);
 }
 
 .sidebar-header {
@@ -121,14 +122,43 @@ section {
 .task-list {
   display: flex;
   align-content: center;
+  padding: 0 0.25rem;
+  cursor: pointer;
+}
+
+.task-list.active {
+  font-weight: bold;
+  border-radius: 5px;
+  background: var(--grey100);
+  color: var(--blue800);
 }
 
 .task-list > img {
   margin-right: 0.5rem;
+  width: 1.5rem;
+  height: 2.25rem;
 }
 
 .task-list > span {
   font-size: 1.5rem;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.number-circle {
+  color: var(--blue800);
+  background: var(--blue200);
+  border-radius: 0.75rem; /* half the size of width/line-height */
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.5rem;
+  text-align: center;
+  width: 1.5rem;
+  margin-top: 0.375rem;
 }
 
 @media only screen and (max-width: 768px) {

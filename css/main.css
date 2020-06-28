@@ -1,0 +1,168 @@
+html,
+body {
+  color: var(--grey900);
+  height: 100%;
+}
+
+:root {
+  /* Primary colours */
+  --blue900: hsl(218, 100%, 17%);
+  --blue800: hsl(216, 98%, 25%);
+  --blue700: hsl(215, 96%, 32%);
+  --blue600: hsl(214, 95%, 36%);
+  --blue500: hsl(212, 92%, 43%);
+  --blue400: hsl(210, 83%, 53%);
+  --blue300: hsl(208, 88%, 62%);
+  --blue200: hsl(206, 93%, 73%);
+  --blue100: hsl(204, 100%, 86%);
+  --blue000: hsl(202, 100%, 95%);
+
+  /* Neutral colours */
+  --grey900: hsl(210, 24%, 16%);
+  --grey800: hsl(209, 20%, 25%);
+  --grey700: hsl(209, 18%, 30%);
+  --grey600: hsl(209, 14%, 37%);
+  --grey500: hsl(211, 12%, 43%);
+  --grey400: hsl(211, 10%, 53%);
+  --grey300: hsl(211, 13%, 65%);
+  --grey200: hsl(210, 16%, 82%);
+  --grey100: hsl(214, 15%, 91%);
+  --grey000: hsl(216, 33%, 97%);
+}
+
+/* Utilities */
+/* ------------------------------------------------------------------------- */
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+}
+
+/* Header styles */
+/* ------------------------------------------------------------------------- */
+header {
+  width: 100%;
+  height: 5rem;
+  z-index: 1000;
+  padding: 0 1rem;
+
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: var(--grey000);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.logo > .icon {
+  display: none;
+}
+
+.search {
+  margin: 0 1rem;
+  height: 2.5rem;
+  overflow: hidden;
+  flex-basis: 400px;
+  display: inline-flex;
+
+  border: 1px solid var(--grey100);
+  border-radius: 5px;
+}
+
+.search > .icon {
+  padding: 0.375rem;
+  align-self: center;
+  background: var(--grey100);
+}
+
+.search > input {
+  flex-grow: 1;
+  border: 0;
+  background: var(--grey100);
+}
+
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+/* Main styles */
+/* ------------------------------------------------------------------------- */
+main {
+  display: flex;
+  height: 100vh;
+}
+
+aside,
+section {
+  padding: 6rem 1rem 1rem 1rem;
+}
+
+aside {
+  min-width: 384px;
+  background: var(--grey100);
+}
+
+.sidebar-header {
+  display: none;
+}
+
+section {
+  flex-grow: 1;
+  background: var(--grey000);
+}
+
+.task-lists {
+  list-style: none;
+  padding: 0;
+}
+
+.task-list {
+  display: flex;
+  align-content: center;
+}
+
+.task-list > img {
+  margin-right: 0.5rem;
+}
+
+.task-list > span {
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .logo > span {
+    display: none;
+  }
+
+  .logo > .icon {
+    display: block;
+  }
+
+  aside {
+    height: 100%;
+    display: none;
+    margin-top: 0;
+    padding: 1rem;
+  }
+
+  .sidebar-header {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+  }
+
+  .block {
+    width: 100%;
+    z-index: 10000;
+    display: block;
+    position: fixed;
+  }
+
+  .hide {
+    display: none;
+    position: static;
+  }
+}

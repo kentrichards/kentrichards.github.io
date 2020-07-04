@@ -26,7 +26,7 @@ body {
   --grey500: hsl(211, 12%, 43%);
   --grey400: hsl(211, 10%, 53%);
   --grey300: hsl(211, 13%, 65%);
-  --grey200: hsl(210, 16%, 82%);
+  --grey200: hsl(210, 15%, 82%);
   --grey100: hsl(214, 15%, 91%);
   --grey000: hsl(216, 33%, 97%);
 }
@@ -189,6 +189,11 @@ ul {
   margin-right: 1rem;
 }
 
+.task-item.checked > div > span {
+  color: var(--grey200);
+  text-decoration: line-through;
+}
+
 .check {
   margin-right: 1rem;
 }
@@ -208,6 +213,24 @@ ul {
 hr {
   border: none;
   border-top: 1px solid var(--grey100);
+}
+
+#completed-divider {
+  display: flex;
+  justify-content: space-between;
+}
+
+#completed-divider hr {
+  flex-grow: 1;
+  border-top: 1px solid var(--grey100);
+}
+
+#completed-divider span {
+  text-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  color: var(--grey200);
+  font-weight: bold;
 }
 
 @media only screen and (max-width: 768px) {

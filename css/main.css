@@ -218,6 +218,7 @@ hr {
 #completed-divider {
   display: flex;
   justify-content: space-between;
+  padding: 0;
 }
 
 #completed-divider hr {

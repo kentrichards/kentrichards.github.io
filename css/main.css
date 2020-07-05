@@ -97,7 +97,7 @@ main {
 
 aside,
 section {
-  padding: 5rem 1rem 1rem 1rem;
+  padding: 5rem 0rem 0rem 0rem;
 }
 
 aside {
@@ -122,7 +122,7 @@ section {
 
 ul {
   list-style: none;
-  padding: 0;
+  padding: 0 1rem;
 }
 
 .task-list,
@@ -160,6 +160,7 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 1rem;
 }
 
 #toggle-visibility {
@@ -232,6 +233,31 @@ hr {
   margin-right: 1rem;
   color: var(--grey200);
   font-weight: bold;
+}
+
+.sticky {
+  position: sticky;
+  bottom: 0;
+}
+
+.sticky input {
+  border: 1px solid var(--grey100);
+  border-radius: 5px;
+  flex-grow: 1;
+  background: var(--grey100);
+  padding: 0.5rem;
+}
+
+.sticky div {
+  border-top: 1px solid var(--grey100);
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  background: var(--grey000);
+}
+
+.sticky img {
+  margin-left: 4px;
 }
 
 @media only screen and (max-width: 768px) {

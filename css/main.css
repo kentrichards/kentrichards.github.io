@@ -276,6 +276,10 @@ hr {
     padding: 1rem;
   }
 
+  .task-lists {
+    padding: 1rem 0;
+  }
+
   section {
     margin-left: 0;
   }

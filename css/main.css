@@ -2,11 +2,8 @@ html,
 body {
   color: var(--grey900);
   background: var(--grey000);
+  height: 100%;
 }
-
-body {
-  height: 100vh;
-} 
 
 :root {
   /* Primary colours */

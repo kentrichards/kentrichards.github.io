@@ -1,8 +1,8 @@
 html,
 body {
   color: var(--grey900);
-  background: var(--grey000);
   height: 100%;
+  background: var(--grey000);
 }
 
 :root {
@@ -123,6 +123,7 @@ section {
 ul {
   list-style: none;
   padding: 0 1rem;
+  margin-bottom: 0;
 }
 
 .task-list,
@@ -237,7 +238,8 @@ hr {
 
 .sticky {
   position: sticky;
-  bottom: 0;
+  bottom: -1px;
+  background: var(--grey000);
 }
 
 .sticky input {
@@ -249,15 +251,18 @@ hr {
 }
 
 .sticky div {
-  border-top: 1px solid var(--grey100);
   padding: 1rem;
-  margin-top: 1rem;
   margin-bottom: 0;
-  background: var(--grey000);
 }
 
 .sticky img {
   margin-left: 4px;
+}
+
+.sticky[stuck] div {
+  border-top: 1px solid var(--grey100);
+  padding: 1rem;
+  margin-top: 1rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -304,6 +309,7 @@ hr {
   }
 }
 
-main, section {
+main,
+section {
   height: 100%;
-} 
+}

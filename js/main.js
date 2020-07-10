@@ -27,4 +27,4 @@ const observer = new IntersectionObserver(
   { threshold: [1] }
 );
 
-observer.observe(document.getElementsByClassName("sticky")[0]);
+observer.observe(document.getElementsByClassName("sticky-footer")[1]);

@@ -85,6 +85,11 @@ main {
 
 /* Form styles */
 /* ------------------------------------------------------------------------- */
+form {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
 form input,
 form button {
   width: 100%;
@@ -92,7 +97,6 @@ form button {
 }
 
 form a {
-  width: 100%;
   display: block;
   text-align: center;
 }
@@ -106,6 +110,7 @@ form a {
   border: 0;
   border-radius: 0;
 
+  color: var(--grey900);
   background: var(--grey000);
   border: 1px solid var(--grey100);
 }
@@ -125,6 +130,11 @@ form a {
   height: 2rem;
   min-width: 5rem;
   padding: 0.25rem 1rem;
+
+  /* Ensures button content (text, icons, etc) is perfectly centered */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-default {
@@ -159,4 +169,9 @@ form a {
 .btn-default--blue:active {
   background: var(--blue600);
   border: 1px solid var(--blue600);
+}
+
+.big {
+  height: 2.5rem;
+  font-size: 1.25rem;
 }

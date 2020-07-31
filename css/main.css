@@ -1,0 +1,436 @@
+html,
+body {
+  color: var(--N800);
+  background: var(--N0);
+}
+
+html,
+body,
+main,
+section {
+  /* Prevents content from being pushed off the screen in Chrome for Android */
+  height: 100%;
+}
+
+:root {
+  /* Primary colours */
+  --B500: #0747a6;
+  --B400: #0052cc; /* main colour, use for actions and backgrounds */
+  --B300: #0065ff;
+  --B200: #2684ff;
+  --B100: #4c9aff;
+  --B75: #b3d4ff;
+  --B50: #deebff;
+
+  /* Dark neutrals */
+  --N900: #091e42;
+  --N800: #172b4d; /* main text colour */
+  --N700: #253858;
+  --N600: #344563;
+  --N500: #42526e;
+
+  /* Mid-neutrals */
+  --N400: #505f79;
+  --N300: #5e6c84;
+  --N200: #6b778c;
+  --N100: #7a869a;
+  --N90: #8993a4;
+  --N80: #97a0af;
+  --N70: #a5adba;
+  --N60: #b3bac5;
+
+  /* Light neutrals */
+  --N50: #c1c7d0;
+  --N40: #dfe1e6;
+  --N30: #ebecf0;
+  --N20: #f4f5f7;
+  --N10: #fafbfc;
+
+  /* White */
+  --N0: #ffffff;
+
+  /* Supporting colours */
+  /* Red */
+  --R500: #bf2600;
+  --R400: #de350b;
+  --R300: #ff5630;
+  --R200: #ff7452;
+  --R100: #ff8f73;
+  --R75: #ffbdad;
+  --R50: #ffebe6;
+
+  /* Yellow */
+  --Y500: #ff8b00;
+  --Y400: #ff991f;
+  --Y300: #ffab00;
+  --Y200: #ffc400;
+  --Y100: #ffe380;
+  --Y75: #fff0b3;
+  --Y50: #fffae6;
+
+  /* Green */
+  /* Good in small amounts as a call-to-action or a button */
+  --G500: #006644;
+  --G400: #00875a;
+  --G300: #36b37e;
+  --G200: #57d9a3;
+  --G100: #79f2c0;
+  --G75: #abf5d1;
+  --G50: #e3fcef;
+
+  /* Teal */
+  --T500: #008da6;
+  --T400: #00a3bf;
+  --T300: #00b8d9;
+  --T200: #00c7e6;
+  --T100: #79e2f2;
+  --T75: #b3f5ff;
+  --T50: #e6fcff;
+
+  /* Purple */
+  /* Good in small amounts, used to display visited links */
+  --P500: #403294;
+  --P400: #5243aa;
+  --P200: #8777d9;
+  --P100: #998dd9;
+  --P75: #c0b6f2;
+  --P50: #eae6ff;
+
+  /*
+    Dark values (400-500) can be used with white text (use N900 with
+    the yellow palette, and only at 18px or higher for the teal palette).
+    These values work best used sparingly, in badges, backgrounds, and text.
+  
+    Mid values (100-300) are bold and vibrant, and can be overwhelming in
+    large doses. They are rarely used for typography unless the type is very
+    large. Check they meet WCAG AA contrast ratios before using.
+  
+    Light values (50-75) can be used with N900 text. They work well as
+    background colours in charts, graphs, and tables rows. These colours can
+    be used for typography on dark neutrals or their 500-value counterparts.
+  
+    The more primary/supporting colours an interface uses, the more of it
+    should be comprised of neutral colours, so as to not overwhelm the user.
+    */
+
+  /* Other common values */
+  --thin-border: 1px solid var(--N30);
+}
+
+/* Header styles */
+/* ------------------------------------------------------------------------- */
+.header {
+  width: 100%;
+  height: 4rem;
+  z-index: 1000;
+  padding: 0 1rem;
+
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: var(--N0);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.header__title {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+}
+
+.header__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.header__icon--hide {
+  display: none;
+}
+
+.search {
+  width: 100%;
+  height: 32px;
+  margin: 0 1rem;
+  height: 2.5rem;
+  overflow: hidden;
+  flex-basis: 400px;
+  display: inline-flex;
+  position: relative;
+
+  /* border: var(--thin-border); */
+  border-radius: 5px;
+}
+
+.search--full-width {
+  margin: 0;
+  flex-basis: 100%;
+}
+
+.search__icon {
+  align-self: center;
+  background: transparent;
+  left: 0.5rem;
+  position: absolute;
+}
+
+.search__input {
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  border-left: 0;
+  background: var(--N30);
+  padding-left: 2.5rem;
+}
+
+.search__input:hover,
+.search__input:focus,
+.search__input:active {
+  background: var(--B50);
+  border-bottom: 2px solid var(--B400);
+}
+
+/* Main layout styles */
+/* ------------------------------------------------------------------------- */
+main {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar,
+section {
+  padding: 5rem 0rem 0rem 0rem;
+}
+
+.sidebar {
+  height: 100%;
+  width: 256px;
+  flex-shrink: 0;
+  position: fixed;
+
+  background: var(--N10);
+  border-right: var(--thin-border);
+}
+
+section {
+  flex-grow: 1;
+  margin-left: 256px;
+  overflow-y: scroll;
+  background: var(--N0);
+}
+
+/* Main content styles */
+/* ------------------------------------------------------------------------- */
+.sidebar__header {
+  display: none;
+}
+
+.sidebar__title {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+}
+
+.sidebar__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.menu {
+  list-style: none;
+  padding: 0 1rem;
+  margin-bottom: 0;
+}
+
+.menu-item {
+  cursor: pointer;
+  display: flex;
+  padding: 0 0.25rem;
+}
+
+.menu-item--active {
+  font-weight: bold;
+  border-radius: 5px;
+  background: var(--B50);
+  color: var(--B400);
+}
+
+.menu-item__icon {
+  margin-right: 0.5rem;
+  width: 1.5rem;
+  height: 2.25rem;
+}
+
+.menu-item__text {
+  font-size: 1.5rem;
+}
+
+.main__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.main__title {
+  font-size: 2rem;
+}
+
+.main__icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-bottom: 0.1rem;
+  margin-right: 0.25rem;
+}
+
+.main__count {
+  color: var(--B500);
+  background: var(--B75);
+  border-radius: 0.75rem; /* half the size of width/line-height */
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.5rem;
+  text-align: center;
+  width: 1.5rem;
+}
+
+.tasks {
+  list-style: none;
+  padding: 0 1rem;
+  margin-bottom: 0;
+}
+
+.task {
+  display: flex;
+  padding: 0 0.25rem;
+  margin-bottom: 0.25rem;
+  align-items: center;
+}
+
+.task__text {
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.task__text--checked {
+  color: var(--N80);
+  text-decoration: line-through;
+}
+
+.task__icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+}
+
+.task__icon--left {
+  margin-right: 1rem;
+}
+
+.task__icon--right {
+  margin: 0;
+  margin-left: auto;
+}
+
+.task__divider {
+  flex-grow: 1;
+  border: none;
+  border-top: var(--thin-border);
+}
+
+.split-divider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+
+.split-divider__horizontal {
+  flex-grow: 1;
+  border: none;
+  border-top: var(--thin-border);
+}
+
+.split-divider__text {
+  text-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  color: var(--N80);
+  font-weight: bold;
+}
+
+.sticky-footer {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 0;
+
+  position: sticky;
+  bottom: -1px;
+
+  background: var(--N0);
+}
+
+.sticky-footer[stuck] {
+  padding: 1rem;
+  margin-top: 1rem;
+  border-top: var(--thin-border);
+}
+
+.sticky-footer--transparent {
+  background: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Header styles */
+  /* ----------------------------------------------------------------------- */
+  .header__title {
+    display: none;
+  }
+
+  .header__icon--hide {
+    display: block;
+  }
+
+  /* Main styles */
+  /* ----------------------------------------------------------------------- */
+  .sidebar {
+    height: 100%;
+    display: none;
+    margin-top: 0;
+    padding: 1rem;
+  }
+
+  section {
+    margin-left: 0;
+  }
+
+  .menu {
+    padding: 1rem 0;
+  }
+
+  .sidebar__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sticky-footer--special {
+    padding: 0;
+  }
+
+  /* Utilities (must be declared in the media query) */
+  /* ----------------------------------------------------------------------- */
+  .block {
+    width: 100%;
+    z-index: 10000;
+    display: block;
+    position: fixed;
+  }
+
+  .hide {
+    display: none;
+    position: static;
+  }
+}

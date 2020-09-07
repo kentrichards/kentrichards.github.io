@@ -201,4 +201,4 @@ var e;!function(){"use strict";var n=!("undefined"==typeof window||!window.docum
 },{"@reduxjs/toolkit":"XvVG","./reducer":"Yc6n"}],"Focm":[function(require,module,exports) {
 "use strict";var e=l(require("react")),r=l(require("react-dom")),t=require("react-redux");require("./styles.css");var u=l(require("./app/App")),a=l(require("./app/store"));function l(e){return e&&e.__esModule?e:{default:e}}r.default.render(e.default.createElement(e.default.StrictMode,null,e.default.createElement(t.Provider,{store:a.default},e.default.createElement(u.default,null))),document.getElementById("app"));
 },{"react":"n8MK","react-dom":"NKHc","react-redux":"jYIL","./styles.css":"Tnu0","./app/App":"yw5R","./app/store":"gJKD"}]},{},["Focm"], null)
-//# sourceMappingURL=/src.874c5501.js.map
+//# sourceMappingURL=/src.9551e1cc.js.map

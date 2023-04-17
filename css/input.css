@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply bg-gray-50 text-gray-900;
+    }
+
+    main {
+        @apply mt-4 xs:mt-8 w-full flex flex-col items-center;
+    }
+
+    h1 {
+        @apply text-xl font-bold;
+    }
+
+    label {
+        @apply text-sm font-semibold text-gray-600 block;
+    }
+}
+
+@layer components {
+    #task-ui {
+        @apply px-4 xs:px-0 w-full xs:w-96;
+    }
+
+    #add-container {
+        @apply relative;
+    }
+
+    #add-input {
+        @apply text-lg w-full py-1 pl-1.5 pr-[3.625rem] rounded-md shadow border-2 border-gray-300 hover:border-orange-300 focus:border-orange-500 focus:outline-none focus:ring-0;
+    }
+
+    #add-btn {
+        @apply text-sm font-semibold rounded absolute right-1.5 inset-y-1.5 text-white bg-orange-500 hover:bg-orange-400 focus:bg-orange-600 focus:outline-none focus:ring-0 py-1.5 px-3 leading-none transition-colors duration-300;
+    }
+
+    #task-list {
+        @apply mt-4 rounded-md w-full xs:w-96;
+    }
+
+    .task {
+        @apply w-full xs:w-96 xs:text-lg flex justify-between items-center space-x-3 px-4 py-2 bg-white xs:first:rounded-t-md xs:last:rounded-b-md;
+    }
+
+    .task-checkbox {
+        @apply cursor-pointer rounded flex-shrink-0 text-orange-500 border-2 border-gray-300 hover:border-orange-300 focus:ring-0 focus:ring-offset-0 focus-visible:outline-2 focus-visible:outline-dashed focus-visible:outline-orange-500;
+    }
+
+    .task-text {
+        @apply flex-grow leading-tight;
+    }
+
+    .task-handle {
+        @apply text-gray-700 rounded cursor-move flex-shrink-0 w-6 h-6 focus-visible:outline-2 focus-visible:outline-dashed focus-visible:outline-orange-500;
+    }
+
+    .placeholder {
+        @apply bg-blue-100 border-white h-6 py-1 -outline-offset-2 outline-dashed outline-2 outline-blue-300;
+    }
+}
